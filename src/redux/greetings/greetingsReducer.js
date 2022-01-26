@@ -18,7 +18,7 @@ export const getGreetingsSuccess = (payload) => ({
 const greetingsReducer = (state = {}, action) =>{
     switch(action.type){
         case GET_GREETINGS_REQUEST: return {...state, loading: true};
-        case GET_GREETINGS_SUCCESS: return {...state, loading: false, list: action.payload};
+        case GET_GREETINGS_SUCCESS: return {...state, loading: false, list: action.payload.greetings};
         default: return state
     }
 }
